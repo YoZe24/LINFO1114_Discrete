@@ -38,7 +38,7 @@ def compute_dijkstra_from_src(graph, src):
         marked[x] = True
 
         for y in range(nb_nodes):
-            if graph[x][y] > 0 and marked[y] == False and dists[y] > dists[x] + graph[x][y]:
+            if graph[x][y] > 0 and not marked[y] and dists[y] > dists[x] + graph[x][y]:
                 dists[y] = dists[x] + graph[x][y]
 
         n += 1
