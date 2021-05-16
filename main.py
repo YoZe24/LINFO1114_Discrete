@@ -1,7 +1,7 @@
-from utils.utils import *
 from algorithms.dijkstra import dijkstra
 from algorithms.bellman_ford import bellman_ford
 from algorithms.floyd_warshall import floyd_warshall
+from matrix_utils.utils import *
 
 filename = "graph.csv"
 

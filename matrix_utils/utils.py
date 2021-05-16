@@ -21,16 +21,16 @@ def compare_matrix(dijkstra_matrix,bellman_ford_matrix,floyd_warshall_matrix):
     :return: True if they are the same
              False if they are not the same
     """
-    if len(dijkstra_matrix) != len(bellman_ford_matrix) or len(dijkstra_matrix) != len(floyd_warshall_matrix):
+    if len(dijkstra_matrix) != len(bellman_ford_matrix) != len(floyd_warshall_matrix):
         return False
 
     for i in range(len(dijkstra_matrix)):
-        if len(dijkstra_matrix[i]) != len(bellman_ford_matrix[i]) or len(dijkstra_matrix[i]) != len(floyd_warshall_matrix[i]):
+        if len(dijkstra_matrix[i]) != len(bellman_ford_matrix[i]) != len(floyd_warshall_matrix[i]):
             return False
 
     for i in range(len(dijkstra_matrix)):
         for j in range(len(dijkstra_matrix)):
-            if dijkstra_matrix[i][j] != bellman_ford_matrix[i][j] or dijkstra_matrix[i][j] != floyd_warshall_matrix[i][j]:
+            if dijkstra_matrix[i][j] != bellman_ford_matrix[i][j] != floyd_warshall_matrix[i][j]:
                 return False
 
     return True

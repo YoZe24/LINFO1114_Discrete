@@ -36,12 +36,12 @@ def compute_bellman_ford_from_src(graph, src):
     dists[src] = 0
 
     n = 0
-    while n < int(nb_edges - 1):
+    while n < len(graph):
         for i in range(len(graph)):
             for j in range(len(graph)):
                 if graph[i][j] != INFINITY and i != j:
-                    if dists[i] != INFINITY and dists[i] + graph[i][j] < dists[j]:
-                        dists[j] = dists[i] + graph[i][j]
+                    if dists[j] != INFINITY and dists[j] + graph[i][j] < dists[i]:
+                        dists[i] = dists[j] + graph[i][j]
         n += 1
 
     return dists
