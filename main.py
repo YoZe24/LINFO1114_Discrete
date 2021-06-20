@@ -5,8 +5,6 @@ from matrix_utils.utils import *
 
 filename = "graph.csv"
 
-# TODO : Improve comments / doc everywhere
-
 def run():
     cost_matrix = read_csv_to_matrix(filename)
     dijkstra_matrix = dijkstra(cost_matrix)
